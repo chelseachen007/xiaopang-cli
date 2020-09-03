@@ -1,41 +1,17 @@
 module.exports = {
-  root: true,
-
-  extends: [
-    "eslint:recommended",
-    "standard",
-  ],
-  plugins: [
-    "node",
-    'js'
-  ],
   env: {
-    browser: true,
-    es2020: true,
-    node: true,
-    jest: true
+    commonjs: true,
+    es2021: true,
+    node: true
   },
-  globals: {
-    name: 'off'
+  //指定当前规则配置从哪里继承。
+  //extends 中可以省略包名的前缀 eslint-config-、eslint-plugin-
+  extends: [
+    'standard'
+  ],
+  parserOptions: {
+    ecmaVersion: 12
   },
   rules: {
-    "indent": ["error", 2, {
-      "MemberExpression": "off"
-    }],
-    "no-shadow": ["error"],
-    "node/no-extraneous-require": ["error", {
-      "allowModules": [
-        "@vue/cli-service",
-        "@vue/cli-test-utils"
-      ]
-    }]
-  },
-  overrides: [
-    {
-      files: ['**/__tests__/**/*.js', "**/cli-test-utils/**/*.js"],
-      rules: {
-        "node/no-extraneous-require": "off"
-      }
-    }
-  ]
+  }
 }
