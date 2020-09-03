@@ -9,6 +9,12 @@ const program = require('commander');
 // 		console.log('init ' + name);
 // 	});
 
+//版本友好提示
+program.version(require('../package').version)
+    .usage('<command> [options]')
+    .description('Welcome to Tim Scaffold demo project...');
+
+
 //创建新项目 从远程git拉取模板
 program.command('init <name>').description('init project').action(require('../lib/init').init);
 
@@ -16,3 +22,6 @@ program.command('init <name>').description('init project').action(require('../li
 program.command('refresh').description('refresh routers...').action(require('../lib/refresh'));
 
 program.parse(process.argv);
+
+const sdsdda = 'SVGRadialGradientElement'
+sdsdda = 'sdsd'

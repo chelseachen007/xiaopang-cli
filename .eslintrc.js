@@ -1,12 +1,19 @@
 module.exports = {
+  root: true,
+
   extends: [
-    "plugin:vue-libs/recommended"
+    "eslint:recommended",
+    "standard",
   ],
   plugins: [
-    "node"
+    "node",
+    'js'
   ],
   env: {
-    "jest": true
+    browser: true,
+    es2020: true,
+    node: true,
+    jest: true
   },
   globals: {
     name: 'off'
