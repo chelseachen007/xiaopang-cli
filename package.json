@@ -8,6 +8,7 @@
 	},
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
+		"precommit": "lint-staged && npm run test",
 		"commitmsg": "commitlint -e $GIT_PARAMS"
 	},
 	"private": false,
@@ -29,11 +30,8 @@
 	},
 	"husky": {
 		"hooks": {
-			"pre-commit": "npm run -s commitmsg"
+			"pre-commit": "npm run lint-staged"
 		}
-	},
-	"gitHooks": {
-		"pre-commit": "lint-staged"
 	},
 	"lint-staged": {
 		"*.{js,vue}": "eslint"
