@@ -27,7 +27,11 @@
 			"path": "cz-customizable"
 		}
 	},
-
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run -s commitmsg"
+		}
+	},
 	"gitHooks": {
 		"pre-commit": "lint-staged"
 	},
