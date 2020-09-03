@@ -21,6 +21,16 @@
 		"url": "https://github.com/chelseachen007/xiaopang-Cli/issues"
 	},
 	"homepage": "https://github.com/chelseachen007/xiaopang-Cli#readme",
+	"lint-staged": {
+		"*.{js,vue}": [
+		  "eslint --fix",
+		  "git add"
+		],
+		"packages/**/bin/*": [
+		  "eslint --fix",
+		  "git add"
+		]
+	  },
 	"dependencies": {
 		"chalk": "^4.1.0",
 		"child_process": "^1.0.2",
