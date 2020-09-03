@@ -14,3 +14,4 @@ program.command('init <name>').description('init project').action(require('../li
 program.command('refresh').description('refresh routers...').action(require('../lib/refresh'))
 
 program.parse(process.argv)
+
