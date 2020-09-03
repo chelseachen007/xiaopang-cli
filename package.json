@@ -27,20 +27,12 @@
 			"path": "cz-customizable"
 		}
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run lint"
-		}
+
+	"gitHooks": {
+		"pre-commit": "lint-staged"
 	},
 	"lint-staged": {
-		"*.{js,vue}": [
-			"eslint --fix",
-			"git add"
-		],
-		"packages/**/bin/*": [
-			"eslint --fix",
-			"git add"
-		]
+		"*.{js,vue}": "eslint"
 	},
 	"dependencies": {
 		"chalk": "^4.1.0",
