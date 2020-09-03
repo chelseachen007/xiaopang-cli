@@ -24,9 +24,14 @@
 	"homepage": "https://github.com/chelseachen007/xiaopang-Cli#readme",
 	"config": {
 		"commitizen": {
-		  "path": "cz-customizable"
+			"path": "cz-customizable"
 		}
-	  },
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "npm run lint"
+		}
+	},
 	"lint-staged": {
 		"*.{js,vue}": [
 			"eslint --fix",
