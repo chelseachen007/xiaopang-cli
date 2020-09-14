@@ -8,10 +8,16 @@ program.version(require('../package').version)
   .description('Welcome to Tim Scaffold demo project...')
 
 // 创建新项目 从远程git拉取模板
-program.command('init <name>').description('init project').action(require('../lib/init').init)
+program
+  .command('init <name>')
+  .description('init project')
+  .action(require('../lib/init').init)
 
 // 自动生成路由文件
-program.command('refresh').description('refresh routers...').action(require('../lib/refresh'))
+program
+  .command('refresh')
+  .description('refresh routers...')
+  .action(require('../lib/refresh'))
 
 program.parse(process.argv)
 
